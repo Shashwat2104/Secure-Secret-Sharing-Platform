@@ -1,6 +1,6 @@
 # 🔒 Secure Secret Sharing Platform
 
-![Secure Secret Sharing Banner](docs/banner.png)
+![Secure Secret Sharing Banner](![alt text](image.png))
 
 ## 🚀 Project Overview
 
@@ -21,19 +21,6 @@
 - **Rate Limiting**: Prevents abuse and brute-force attacks.
 - **Modern UI**: Responsive, accessible, and visually appealing.
 
----
-
-## 🖼️ Screenshots
-
-> **Replace the image paths with your actual screenshots!**
-
-| Home Page                     | Create Secret                   | Dashboard                          |
-| ----------------------------- | ------------------------------- | ---------------------------------- |
-| ![](docs/screenshot-home.png) | ![](docs/screenshot-create.png) | ![](docs/screenshot-dashboard.png) |
-
-| Secret View                   | Password Prompt                   | Expired/Viewed                   |
-| ----------------------------- | --------------------------------- | -------------------------------- |
-| ![](docs/screenshot-view.png) | ![](docs/screenshot-password.png) | ![](docs/screenshot-expired.png) |
 
 ---
 
