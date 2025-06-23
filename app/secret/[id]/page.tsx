@@ -14,7 +14,7 @@ import { toast } from "sonner";
 
 export default function ViewSecret() {
   const params = useParams();
-  const secretId = params.id as string;
+  const secretId = params && typeof params.id === "string" ? params.id : "";
   const [password, setPassword] = useState("");
   const [secretContent, setSecretContent] = useState("");
   const [isRevealed, setIsRevealed] = useState(false);
@@ -51,10 +51,13 @@ export default function ViewSecret() {
           try {
             const { ciphertext, iv } = JSON.parse(data.content);
             const keyBytes = new Uint8Array(
-              fragment.match(/.{1,2}/g).map((byte) => parseInt(byte, 16))
+              fragment
+                ?.match(/.{1,2}/g)
+                ?.map((byte: string) => parseInt(byte, 16)) ?? []
             );
             const ivBytes = new Uint8Array(
-              iv.match(/.{1,2}/g).map((byte) => parseInt(byte, 16))
+              iv?.match(/.{1,2}/g)?.map((byte: string) => parseInt(byte, 16)) ??
+                []
             );
             const cryptoKey = await window.crypto.subtle.importKey(
               "raw",
