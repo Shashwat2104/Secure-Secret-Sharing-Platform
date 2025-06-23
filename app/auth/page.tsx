@@ -82,7 +82,14 @@ export default function Auth() {
 
         <Card className="bg-white/10 backdrop-blur-lg border-white/20 shadow-2xl">
           <CardContent className="pt-6">
-            <Tabs value={activeTab} onValueChange={setActiveTab}>
+            <Tabs
+              value={activeTab}
+              onValueChange={(value) => {
+                if (value === "signin" || value === "signup") {
+                  setActiveTab(value);
+                }
+              }}
+            >
               <TabsList className="grid w-full grid-cols-2 bg-white/5">
                 <TabsTrigger
                   value="signin"
