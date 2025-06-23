@@ -13,8 +13,8 @@ import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 
 export default function ViewSecret() {
-  const params = useParams();
-  const secretId = params && typeof params.id === "string" ? params.id : "";
+  const params = useParams() as Record<string, string> | null;
+  const secretId = params?.id ?? "";
   const [password, setPassword] = useState("");
   const [secretContent, setSecretContent] = useState("");
   const [isRevealed, setIsRevealed] = useState(false);
