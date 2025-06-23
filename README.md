@@ -1,6 +1,6 @@
 # 🔒 Secure Secret Sharing Platform
 
-!(![alt text](image.png)
+![alt text](image.png)
 
 ## 🚀 Project Overview
 
