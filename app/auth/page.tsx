@@ -20,7 +20,7 @@ export default function Auth() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState(
-    searchParams.get("mode") === "signup" ? "signup" : "signin"
+    searchParams?.get("mode") === "signup" ? "signup" : "signin"
   );
 
   useEffect(() => {
