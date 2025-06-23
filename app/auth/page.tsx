@@ -19,9 +19,15 @@ export default function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState(
-    searchParams?.get("mode") === "signup" ? "signup" : "signin"
-  );
+  const [activeTab, setActiveTab] = useState("signin");
+
+  useEffect(() => {
+    if (searchParams?.get("mode") === "signup") {
+      setActiveTab("signup");
+    } else {
+      setActiveTab("signin");
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     if (user) {
